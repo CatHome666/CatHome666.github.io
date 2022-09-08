@@ -33,35 +33,35 @@
         <script type="text/javascript"  src="js/L2Dwidget.0.min.js"></script>
         <script type="text/javascript"  src="js/L2Dwidget.min.js"></script>
 	<script type="text/javascript">
-/* 鼠标特效 */
-var a_idx = 0;
-jQuery(document).ready(function($) {
-    $("body").click(function(e) {
-        var a = new Array("❤蒂法❤","❤2B小姐姐❤","❤甘雨老婆❤","❤阿晴❤","❤每天，都要开心哟❤","❤红喵客探Share❤","❤水击三千里z❤","❤游戏喵探❤","❤喵屋Game❤","❤注意，有妹子盯着你❤","❤哎呦！大帅锅❤","❤Hello❤");
-        var $i = $("<span></span>").text(a[a_idx]);
-        a_idx = (a_idx + 1) % a.length;
-        var x = e.pageX,
-        y = e.pageY;
-        $i.css({
-            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
-            "top": y - 20,
-            "left": x,
-            "position": "absolute",
-            "font-weight": "bold",
-            "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
-        });
-        $("body").append($i);
-        $i.animate({
-            "top": y - 180,
-            "opacity": 0
-        },
-        3000,
-        function() {
-            $i.remove();
-        });
-    });
-});
-</script>
+        /* 鼠标特效 */
+        var a_idx = 0;
+        jQuery(document).ready(function($) {
+           $("body").click(function(e) {
+               var a = new Array("❤蒂法❤","❤2B小姐姐❤","❤甘雨老婆❤","❤阿晴❤","❤每天，都要开心哟❤","❤红喵客探Share❤","❤水击三千里z❤","❤游戏喵探❤","❤喵屋Game❤","❤注意，有妹子盯着你❤","❤哎呦！大帅锅❤","❤Hello❤");
+               var $i = $("<span></span>").text(a[a_idx]);
+               a_idx = (a_idx + 1) % a.length;
+               var x = e.pageX,
+               y = e.pageY;
+               $i.css({
+                   "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                   "top": y - 20,
+                   "left": x,
+                   "position": "absolute",
+                   "font-weight": "bold",
+                   "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
+               });
+               $("body").append($i);
+               $i.animate({
+                   "top": y - 180,
+                   "opacity": 0
+               },
+               3000,
+               function() {
+                   $i.remove();
+               });
+            });
+         });
+         </script>
 
 </head>
 
