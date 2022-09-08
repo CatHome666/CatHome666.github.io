@@ -37,51 +37,6 @@
 
 <body>
      <script>
-        (function () {
-            var a_idx = 0;
-            window.onclick = function (event) {
-                var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国",
-                    "敬业", "诚信", "友善");
- 
-                var heart = document.createElement("b"); //创建b元素
-                heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
- 
-                document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
-                a_idx = (a_idx + 1) % a.length;
-                heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
- 
-                var f = 16, // 字体大小
-                    x = event.clientX - f / 2, // 横坐标
-                    y = event.clientY - f, // 纵坐标
-                    c = randomColor(), // 随机颜色
-                    a = 1, // 透明度
-                    s = 1.2; // 放大缩小
- 
-                var timer = setInterval(function () { //添加定时器
-                    if (a <= 0) {
-                        document.body.removeChild(heart);
-                        clearInterval(timer);
-                    } else {
-                        heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
-                            c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
-                            s + ");";
- 
-                        y--;
-                        a -= 0.016;
-                        s += 0.002;
-                    }
-                }, 15)
- 
-            }
-            // 随机颜色
-            function randomColor() {
- 
-                return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
-                .random() * 255)) + ")";
- 
-            }
-        }());
-   
       L2Dwidget.init({"display": {
       "superSample": 2,
       "width": 200,
@@ -115,7 +70,6 @@
 				<li id="cleft_li06" onclick="AddFavorite('喵屋分享网',location.href)"><img
 						src="font/cnmsb06.png" /><span>收藏页面</span></li>
 
-				<!-- <li class="cleft_bottom"><img src="font/nav_bottom.png"><span>宽度设置</span></li> -->
 			</ul>
 
 
@@ -783,7 +737,7 @@
 					</div>
 
 					<!-- 到底了-提示 -->
-					<p class="ebpx7">--- 如果有好的想法或建议，可发送至站长邮箱(admin@qccce.com)，期待您的来信---</p>
+					<p class="ebpx7">--- 如果有好的想法或建议，可发送至红喵邮箱(redmeow2022@163.com)，期待您的来信---</p>
 				</div>
 			</div>
 
@@ -814,64 +768,64 @@
 			<div id="exnav01">
 				<div class="exn1_top">
 					<img src="img/cnm.sb.svg" />
-					<span>6666</span>
-					<!-- <a href="https://" target="_blank" rel="noopener noreferrer">官网</a> -->
+					<span>喵屋Game手机版</span>
+					<!-- <a href="https://space.bilibili.com/1268105442" target="_blank" rel="noopener noreferrer">B站个人主页</a> -->
 				</div>
 				<div class="exn1_banner">
 					<h3>欢迎来到</h3>
-					<p>这个牛批的站点，获取源码请前往电脑端~</p>
-					<p>API延缓加载速度，顶部随机图片不再使用</p>
+					<p>喵屋Game分享网，获取资源请前往电脑端~</p>
+					<p>初次见面，正在人间奋斗的你！</p>
 				</div>
 				<ul class="exn1_but">
 					<li id="exn1_01">
 						<div><img src="font/cnmsb01.png" /></div>
-						<h5>官网首页</h5>
-						<p>当前页面-可以前往<span class="red">PC端</span>观看美景哟！</p>
+						<h5>网站首页</h5>
+						<p>当前页面-可以前往<span class="red">PC端</span>观看美图哟！</p>
 					</li>
 					<li id="exn1_02">
 						<div><img src="font/cnmsb02.png" /></div>
-						<h5>关于本站</h5>
-						<p>关于本站站长的相关信息与爱好哟！</p>
+						<h5>每日资讯</h5>
+						<p>二次元、ACG热门资讯分享</p>
 					</li>
 					<li id="exn1_03">
 						<div><img src="font/cnmsb03.png" /></div>
-						<h5>站长团队</h5>
-						<p>站长的小伙伴们，也许你也可以加入喔~</p>
+						<h5>虚拟团队</h5>
+						<p>RM 红喵虚拟工作室~</p>
 					</li>
 					<li id="exn1_04">
 						<div><img src="font/cnmsb04.png" /></div>
-						<h5>商业合作</h5>
-						<p>想找我们定制模板？谈合作？点这里！</p>
+						<h5>恰饭合作</h5>
+						<p>防止流落街头，谈合作？点这里！</p>
 					</li>
 					<li id="exn1_05">
 						<div><img src="font/cnmsb05.png" /></div>
-						<h5>站点展示</h5>
-						<p>这里包含了站长的所有奇怪的站点哟！</p>
+						<h5>收集展示</h5>
+						<p>这里包含了红喵的一些神秘的宝贝！</p>
 					</li>
 				</ul>
 			</div>
-			<!-- NO2-关于本站 -->
+			<!-- NO2-每日资讯 -->
 			<div id="exnav02">
 				<div class="exn02_bg">
-					<p>关于本站</p>
+					<p>每日资讯</p>
 				</div>
 				<div class="exn02_zl">
-					<h3 class="exn_bt">站/长/资/料</h3>
+					<h3 class="exn_bt">游/戏/内/容</h3>
 					<div class="exn02_kjt">
-						<p>网名：秃鼎程序员</p>
-						<p>邮箱：x6dtousu@gmail.com(站长同款邮箱，免费申请)</p>
-						<p>性别：boy</p>
-						<p>年龄：暂不告密 [一位有理想的青少年]</p>
-						<p>特长：腿特长</p>
-						<p>爱好：音乐、运动、设计、摄影、等……</p>
-						<p>性格：落落大方</p>
-						<p>梦想：实现财富自由</p>
-						<p>语录：凡心所向，素履所往，生如逆旅，一苇以航。——《尘曲》</p>
-						<p>语录：合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。——《道德经·第六十四章》</p>
+						<p>名称：创世秩序</p>
+						<p>版本：V41091</p>
+						<p>更新：9月6日</p>
+						<p>类型：SLG</p>
+						<p>制作：Nidia</p>
+						<p>汉化：XX汉化</p>
+						<p>支持：PC+安卓</p>
+						<p>大小：2.10G</p>
+						<p>网盘：百度</p>
+						<p>观点：合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。——《道德经·第六十四章》</p>
 					</div>
 				</div>
 				<div class="exn02_zl">
-					<h3 class="exn_bt">个/人/介/绍</h3>
+					<h3 class="exn_bt">番/剧/介/绍</h3>
 					<div class="exn02_kjt">
 
 						<p>
@@ -981,14 +935,14 @@
 					</div>
 				</div>
 				<!-- 到底了-提示 -->
-				<p class="exbpx">--- 暂时先展示这么多啦 ---</p>
+				<p class="exbpx">--- 别再下拉了，本喵也是有底线滴 ---</p>
 			</div>
-			<!-- NO3-站长团队 -->
+			<!-- NO3-虚拟团队 -->
 			<div id="exnav03">
 				<div class="exnav03_p">
-					<h3>小刀<span>娱乐工作室</span></h3>
+					<h3>RM<span>红喵虚拟工作室</span></h3>
 					<h5>划水摸鱼，闲无止境~</h5>
-					<p>2020-2021</p>
+					<p>2020-2022</p>
 					<p>我们是黑暗中照亮书本的明灯，光明下抒写思绪的墨笔。</p>
 				</div>
 				<div class="exnav03_team">
@@ -1009,26 +963,26 @@
 					<p>即使夜深人静，我们依然在努力！</p>
 				</div>
 			</div>
-			<!-- NO5-站点展示 -->
+			<!-- NO5-收集展示 -->
 			<div id="exnav05">
 				<div class="exn5_bg">
 					<div class="exn5_bg_nav">
 						<img src="img/nav05_fj.png" />
-						<span>站点展示</span>
+						<span>收集展示</span>
 					</div>
 				</div>
 				<!-- 第五页-内容区域 -->
 				<div class="exn5_nr">
 					<div class="exnav05_centent_tit">
-						<h2>🦄官方站点🦄</h2>
-						<p>注:如果官方站点打不开则因为服务器被DDOS了</p>
+						<h2>🦄常用平台🦄</h2>
+						<p>常用的分享平台</p>
 					</div>
 					<!-- 作品展示模板NO1 -->
 					<div class="exnav05_centent_mb">
-						<h2>官方站点</h2>
-						<a href="http://#/" target="_blank" rel="noopener noreferrer">
+						<h2>常用平台</h2>
+						<a href="https://space.bilibili.com/1268105442" target="_blank" rel="noopener noreferrer">
 							<div><img src="img/nav05_zp01.jpg" alt="[]" /></div>
-							<h3>个人博客</h3>
+							<h3>B站空间</h3>
 							<p>爱生活，爱分享</p>
 						</a>
 						<div>立即前往</div>
@@ -1037,7 +991,7 @@
 					<div class="exnav05_centent_mb">
 						<a href="http://#/" target="_blank" rel="noopener noreferrer">
 							<div><img src="img/nav05_zp02.jpg" alt="[]" /></div>
-							<h3>LSP论坛</h3>
+							<h3>爱发电空间</h3>
 							<p>你喜欢的这里都有</p>
 						</a>
 						<div>立即前往</div>
@@ -1046,7 +1000,7 @@
 					<div class="exnav05_centent_mb">
 						<a href="http://#" target="_blank" rel="noopener noreferrer">
 							<div><img src="img/nav05_zp03.jpg" alt="[]" /></div>
-							<h3>傻逼查询网</h3>
+							<h3>微信公众号</h3>
 							<p>查询网络中对我实施语言暴力的傻逼</p>
 						</a>
 						<div>立即前往</div>
@@ -1073,8 +1027,8 @@
 					<div class="exnav05_centent_mb">
 						<a href="http://#" target="_blank" rel="noopener noreferrer">
 							<div><img src="img/nav05_zp01.jpg" alt="[]" /></div>
-							<h3>迪奥很大</h3>
-							<p>就很大~</p>
+							<h3>百度网盘</h3>
+							<p>神秘宝藏</p>
 						</a>
 						<div>立即前往</div>
 					</div>
@@ -1083,7 +1037,7 @@
 				<!--团队成员优秀站点-->
 				<div class="exn5_nr">
 					<div class="exnav05_centent_tit">
-						<h2>🦄团队成员·优秀站点🦄</h2>
+						<h2>🦄投稿分享·优秀站点🦄</h2>
 						<p>优秀的站点就应该被展示出来！</p>
 					</div>
 					<!-- 作品展示模板NO1 -->
@@ -1160,16 +1114,16 @@
 				<p>首页</p>
 			</li>
 			<li><img src="font/cnmsb02.png" />
-				<p>关于本站</p>
+				<p>每日资讯</p>
 			</li>
 			<li><img src="font/cnmsb03.png" />
-				<p>站长团队</p>
+				<p>虚拟团队</p>
 			</li>
 			<li><img src="font/cnmsb04.png" />
 				<p>商业合作</p>
 			</li>
 			<li><img src="font/cnmsb05.png" />
-				<p>站点展示</p>
+				<p>收集展示</p>
 			</li>
 		</ul>
 		<!-- 背景飘落 -->
